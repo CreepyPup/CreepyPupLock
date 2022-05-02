@@ -113,7 +113,7 @@ end)
         return old(...)
     end)
     else
-        print("_g.AimLock1=false")
+        print("_G.AimLock1 = false")
     end
 end)
 
