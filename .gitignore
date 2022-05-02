@@ -1,4 +1,11 @@
-local CC = game:GetService"Workspace".CurrentCamera
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("CreepyPup", "DarkTheme")
+
+local Tab1 = Window:NewTab("AimLock")
+local Tab1Section = Tab:NewSection("Lock")
+Section:NewToggle("ToggleText", "ToggleInfo", function(state)
+    if state then
+        local CC = game:GetService"Workspace".CurrentCamera
     local Plr
     local enabled = falseWD
     local accomidationfactor = 0.129145
@@ -105,19 +112,8 @@ end)
         end
         return old(...)
     end)
+    else
+        print("Toggle Off")
+    end
+end)
 
-game.Players.LocalPlayer.Character.Head.Transparency = 1
-game.Players.LocalPlayer.Character.Head.Transparency = 1
-for i,v in pairs(game.Players.LocalPlayer.Character.Head:GetChildren()) do
-if (v:IsA("Decal")) then
-v.Transparency = 1
-end
-end
-local ply = game.Players.LocalPlayer
-local chr = ply.Character
-chr.RightLowerLeg.MeshId = "902942093"
-chr.RightLowerLeg.Transparency = "1"
-chr.RightUpperLeg.MeshId = "http://www.roblox.com/asset/?id=902942096"
-chr.RightUpperLeg.TextureID = "http://roblox.com/asset/?id=902843398"
-chr.RightFoot.MeshId = "902942089"
-chr.RightFoot.Transparency = "1"
